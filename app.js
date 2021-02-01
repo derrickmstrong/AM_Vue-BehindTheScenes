@@ -18,9 +18,41 @@ const app = Vue.createApp({
       console.dir(this.$refs.userText);
     },
   },
+  // Lifecycle Methods/Hooks
+  beforeCreate() {
+    console.log('beforeCreate()');
+  },
+  created() {
+    console.log('created()');
+  },
+  beforeMount() {
+    console.log('beforeMount()');
+  },
+  mounted() {
+    console.log('mounted()');
+  },
+  beforeUpdated() {
+    console.log('beforeUpdated()');
+  },
+  updated() {
+    console.log('updated()');
+  },
+  beforeUnmount() {
+    console.log('beforeUnmount()');
+  },
+  unmounted() {
+    console.log('unmounted()');
+  },
 });
 
 app.mount('#app');
+
+// Unmount App
+// setTimeout(function() {
+//   app.unmount();
+// }, 5000);
+
+
 
 const app2 = Vue.createApp({
   template: ' <p>{{ favoriteMeal }}</p>',
